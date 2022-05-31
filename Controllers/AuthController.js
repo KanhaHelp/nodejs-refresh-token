@@ -105,9 +105,20 @@ const AuthController = {
 
                     console.log('fffffffffffffffff', refreshTokenData);
 
+                    // / const userDetails = decoded.data;
+                    //check if token is today's date or not.
+                    // let creationDate = decoded.iat;
+                    // if (moment(creationDate * 1000).format('YYYY-MM-DD') == moment().format("YYYY-MM-DD")) {
+                    //   return res.status(200).json(
+                    //     {
+                    //       success: true,
+                    //       message: 'Requested date and current date is same. No need to upgrade token.'
+                    //     }
+                    //   );
+                    // }
 
                     const accessToken = jwt.sign({ user: { id: refreshTokenData.user._id, username: refreshTokenData.user.username } }, ACCESS_TOKEN_SECRET, {
-                        expiresIn: "7d",
+                        expiresIn: "1d",
                     });
 
 

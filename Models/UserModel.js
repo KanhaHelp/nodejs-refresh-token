@@ -34,7 +34,7 @@ userSchema.methods = {
                 { user: { _id, username } },
                 ACCESS_TOKEN_SECRET,
                 {
-                    expiresIn: "1d",
+                    expiresIn: "1d", //expire in 1 day
                 }
             );
             return accessToken;
@@ -50,7 +50,7 @@ userSchema.methods = {
                 { user: { _id, username } },
                 REFRESH_TOKEN_SECRET,
                 {
-                    expiresIn: "7d",
+                    expiresIn: "7d", //expire in 7 days
                 }
             );
             return refreshToken;
