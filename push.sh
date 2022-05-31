@@ -7,4 +7,4 @@ git add .
 
 git commit -am "$message"
 
-git push origin main
+git push origin master
